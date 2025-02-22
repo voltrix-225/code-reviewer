@@ -2,10 +2,11 @@ from src.analyzers.complexity_checker import calculateCyclomaticComplexity, coun
 from src.analyzers.style_checker import check_code_style_issues
 from src.analyzers.security_checker import analyze_security, Pwd_checker, check_subprocess
 from src.analyzers.syntax_checker import check_syntax_errors
-from src.analyzers.score import check_score
+from src.analyzers.scores import check_score
 import sys
 import os
 
+"""Will add docs later"""
 
 def analyze_file(fp):
     
@@ -38,7 +39,7 @@ def analyze_file(fp):
 
 def main():
     if len(sys.argv) < 2 :
-        print("Usage : python scrript.py <filename>")
+        print("Usage : python script.py <filename>")
         sys.exit(1)
 
         
