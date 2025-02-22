@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+code_reviewer.egg-info/PKG-INFO
+code_reviewer.egg-info/SOURCES.txt
+code_reviewer.egg-info/dependency_links.txt
+code_reviewer.egg-info/entry_points.txt
+code_reviewer.egg-info/requires.txt
+code_reviewer.egg-info/top_level.txt

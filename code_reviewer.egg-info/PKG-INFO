@@ -1,0 +1,8 @@
+Metadata-Version: 2.2
+Name: code-reviewer
+Version: 1.0
+Summary: Code analyzer/reviewer
+License-File: LICENSE
+Requires-Dist: pylint
+Dynamic: requires-dist
+Dynamic: summary
