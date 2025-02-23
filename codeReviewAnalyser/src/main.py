@@ -6,9 +6,10 @@ from src.analyzers.scores import check_score
 import sys
 import os
 
-"""Will add docs later"""
+
 
 def analyze_file(fp):
+    """ all the modules, and formats the output"""
     
     syntax = check_syntax_errors(fp)
     if not syntax:
@@ -38,6 +39,7 @@ def analyze_file(fp):
     print(f"THE PYLINT CODE SCORE IS : {score}/10")
 
 def main():
+    """This is the driver code, made for Command-Line Args"""
     if len(sys.argv) < 2 :
         print("Usage : python script.py <filename>")
         sys.exit(1)

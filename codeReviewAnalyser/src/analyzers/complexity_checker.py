@@ -8,26 +8,31 @@ class CyclomaticComplexityChecker(ast.NodeVisitor):
         self.complexity = 0
 
     def visit_If(self, node):
+        """Checks complexity arising from 'if' statements"""
         print(f"Encountered 'if' statement at line number {node.lineno}")
         self.complexity += 1
         self.generic_visit(node)
 
     def visit_While(self, node):
+        """Checks complexity arising from 'while' loops"""
         print(f"Encountered 'while' statement at line number {node.lineno}")
         self.complexity += 1
         self.generic_visit(node)
 
     def visit_For(self, node):
+        """Checks complexity arising from 'for' loops"""
         print(f"Encountered 'for' loop at line number {node.lineno}")
         self.complexity += 1
         self.generic_visit(node)
 
     def visit_BoolOp(self, node):
+        """Checks complexity arising from 'boolean' operations"""
         print(f"Encountered Boolean Operation at line number {node.lineno}")
         self.complexity += 1
         self.generic_visit(node)
         
     def visit_Try(self, node):
+        """Checks complexity arising from 'try' blocks"""
         print(f"Encountered 'Try Block' at line number {node.lineno}")
         self.complexity += 1
         self.generic_visit(node)
@@ -47,6 +52,7 @@ class NestedLoopCounter(ast.NodeVisitor):
         self.current_depth = 0
 
     def visit_For(self, node):
+        """Checks complexity arising from nested 'for' loops"""
         self.current_depth += 1
         self.max_depth = max(self.current_depth, self.max_depth)
         self.generic_visit(node)
@@ -54,6 +60,7 @@ class NestedLoopCounter(ast.NodeVisitor):
 
 
     def visit_While(self, node):
+        """Checks complexity arising from nested 'while' loops"""
         self.current_depth += 1
         self.max_depth = max(self.current_depth, self.max_depth)
         self.generic_visit(node)

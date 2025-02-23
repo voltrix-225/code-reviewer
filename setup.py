@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-'''DOCS to be added LATER'''
+'''Setup file for global module'''
 
 setup(
     name = "code-reviewer",
